@@ -43,5 +43,7 @@ deploy_job:
   script:
     - echo "deploy ......"
     # - yum update -y
-    - mv ./dist /usr/share/nginx/html/www/dist
+    - rm -rf /usr/share/nginx/html/www/dist
+    - mkdir /usr/share/nginx/html/www/dist
+    - mv ./dist/* /usr/share/nginx/html/www/dist
     - echo "done"
