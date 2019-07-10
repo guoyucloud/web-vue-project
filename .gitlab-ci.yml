@@ -43,6 +43,9 @@ deploy_job:
   script:
     - echo "deploy ......"
     # - yum update -y
+    - ls
+    - echo $(pwd)
+    - cd /
+    - ls
     - docker mv ed72c643f6a1:/builds/root/web-vue-project/dist /usr/share/nginx/html/www
-
     - echo "done"
