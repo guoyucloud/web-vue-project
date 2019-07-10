@@ -43,6 +43,5 @@ deploy_job:
   script:
     - echo "deploy ......"
     # - yum update -y
-    - ll
     - ls
     - echo "done"
