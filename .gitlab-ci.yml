@@ -43,5 +43,7 @@ deploy_job:
   script:
     - echo "deploy ......"
     # - yum update -y
-    - mv ./dist /gygyppp
+    - echo $(pwd)
+    - cd /
+    - echo $(pwd)
     - echo "done"
