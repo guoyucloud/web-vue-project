@@ -47,5 +47,5 @@ deploy_job:
     - echo $(pwd)
     - cd /
     - ls
-    - docker mv ed72c643f6a1:/builds/root/web-vue-project/dist /usr/share/nginx/html/www
+    - docker cp ed72c643f6a1:/builds/root/web-vue-project/dist /usr/share/nginx/html/www
     - echo "done"
