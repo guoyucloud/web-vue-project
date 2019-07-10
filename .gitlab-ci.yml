@@ -51,4 +51,6 @@ deploy_job:
     - ls
     - cd gygyppp
     - echo $(pwd)
+    - cd ~
+    - ls
     - echo "done"
