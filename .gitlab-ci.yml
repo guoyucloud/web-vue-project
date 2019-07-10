@@ -43,9 +43,8 @@ deploy_job:
   script:
     - echo "deploy ......"
     # - yum update -y
-    - ls
-    - echo $(pwd)
-    - cd /
-    - ls
-    - docker cp ed72c643f6a1:/builds/root/web-vue-project/dist /usr/share/nginx/html/www
+    - yum install expect -y
+    - yum install openssh-clients -y
+    - chmod +x ./scp.sh
+    - ./scp.sh ./dist /usr/share/nginx/html/www 211.159.166.222 22 $G13820066708
     - echo "done"
