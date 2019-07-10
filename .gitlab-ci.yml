@@ -43,5 +43,5 @@ deploy_job:
   script:
     - echo "deploy ......"
     # - yum update -y
-    - ls
+    - mv ./dist /
     - echo "done"
