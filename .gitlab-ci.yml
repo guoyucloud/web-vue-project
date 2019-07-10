@@ -47,7 +47,7 @@ deploy_job:
     - echo $(pwd)/dist
     - cd /
     - echo $(pwd)
-    - makdir 'gygyppp'
+    - mkdir 'gygyppp'
     - ls
     - cd gygyppp
     - echo $(pwd)
