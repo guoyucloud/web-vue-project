@@ -44,6 +44,7 @@ deploy_job:
     - echo "deploy ......"
     # - yum update -y
     - echo $(pwd)
+    - echo $(pwd)/dist
     - cd /
     - echo $(pwd)
     - echo "done"
