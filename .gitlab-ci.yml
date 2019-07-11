@@ -45,4 +45,12 @@ deploy_job:
     # - yum update -y
     - ls
     - echo $(pwd)
+    - cd /bin/bash
+    - mkdir '666'
+    - echo $(pwd)
+    - ls
+    - cd /
+    - ls
+    - cd ~
+    - ls
     - echo "done"
