@@ -45,8 +45,9 @@ deploy_job:
     # - yum update -y
     - ls
     - echo $(pwd)
-    - cd /bin/bash
-    - mkdir '666'
+    - cd ..
+    - cd ..
+    - cd ..
     - echo $(pwd)
     - ls
     - cd /
