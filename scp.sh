@@ -12,10 +12,10 @@ if { ! ([file exists /usr/bin/scp] && [file executable /usr/bin/scp])} {
     exit 7
 }
 
-echo $Port
-echo $File
-echo $Host
-echo $Target
+printf $Port
+printf $File
+printf $Host
+printf $Target
 
 spawn /usr/bin/scp -r -P $Port $File root@$Host:$Target
 expect {
