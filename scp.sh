@@ -12,7 +12,7 @@ if { ! ([file exists /usr/bin/scp] && [file executable /usr/bin/scp])} {
     exit 7
 }
 
-spawn /usr/bin/scp -r -P $File root@$Host:Target
+spawn /usr/bin/scp -r -P $File root@$Host:$Target
 expect {
 "yes/no" { send "yes\r"; exp_continue}
 "password:" { send "$Pass\r" }
