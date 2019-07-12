@@ -10,6 +10,6 @@ if { ! ([file exists /usr/bin/scp] && [file executable /usr/bin/scp])} {
 spawn /usr/bin/scp -r -P 11022 ./dist root@211.159.166.222:/usr/share/nginx/html/www
 expect {
 "yes/no" { send "yes\r"; exp_continue}
-"password:" { send "$G13820066708\r" }
+"password:" { send "\$G13820066708\r" }
 }
 expect eof
