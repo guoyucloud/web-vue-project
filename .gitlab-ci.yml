@@ -52,6 +52,4 @@ deploy_job:
     - ls
     - cd /
     - ls
-    - cd ~
-    - ls
     - echo "done"
