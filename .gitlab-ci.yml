@@ -43,13 +43,8 @@ deploy_job:
   script:
     - echo "deploy ......"
     # - yum update -y
-    - ls
-    - echo $(pwd)
-    - cd ..
-    - cd ..
-    - cd ..
-    - echo $(pwd)
-    - ls
-    - cd /
-    - ls
+    - yum install expect -y
+    - yum install openssh-clients -y
+    - chmod +x ./scp.sh
+    - ./scp.sh ./dist /usr/share/nginx/html/www 211.159.166.222 $G13820066708
     - echo "done"
