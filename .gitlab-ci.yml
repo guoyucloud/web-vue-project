@@ -46,5 +46,5 @@ deploy_job:
     - yum install expect -y
     - yum install openssh-clients -y
     - chmod +x ./scp.sh
-    - ./scp.sh ./dist /usr/share/nginx/html/www 211.159.166.222 11022 '$G13820066708'
+    - ./scp.sh ./dist /usr/share/nginx/html/www 211.159.166.222 11022 $G13820066708
     - echo "done"
