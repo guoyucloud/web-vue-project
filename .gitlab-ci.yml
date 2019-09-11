@@ -11,7 +11,7 @@ build_job:
   stage: build
   tags:
     - master
-  image: node:12
+  image: node:11
   only:
     - master
   script:
