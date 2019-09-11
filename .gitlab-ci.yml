@@ -11,7 +11,7 @@ build_job:
   stage: build
   tags:
     - master
-  image: alpine:latest
+  image: node:12
   only:
     - master
   script:
