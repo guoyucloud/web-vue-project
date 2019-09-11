@@ -10,7 +10,7 @@ cache:
 build_job:
   stage: build
   tags:
-    - master
+    - bbq
   image: node:12
   only:
     - master
