@@ -1,25 +1,19 @@
 <template>
-	<div class="home">
-		<div class="home-calendar">
-			<el-calendar v-model="value" />
-		</div>
+	<div class="article_content">
+		1
 	</div>
 </template>
 
 <script>
 	export default {
-		name: 'Home',
+		name: 'GArticleContent',
 		components: {
 		},
 		data () {
 			return {
-				value: new Date()
 			}
 		}
 	}
 </script>
-
 <style lang="scss">
-	.home-calendar{
-	}
 </style>
