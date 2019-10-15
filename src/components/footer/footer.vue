@@ -1,7 +1,7 @@
 <template>
 	<div class="g-footer">
 		<span>
-			@GuoYu | WEB前端技术 | 津ICP备18000299号-1
+			@GuoYu | WEB前端技术 | <a :href="url" target="_blank">津ICP备18000299号-1</a>
 		</span>
 	</div>
 </template>
@@ -11,7 +11,7 @@
 		name: 'GFooter',
 		data () {
 			return {
-
+				url: 'http://www.beian.miit.gov.cn/'
 			}
 		}
 	}
@@ -26,5 +26,8 @@
 		text-align: center;
 		color: #666;
 		font-size: 12px;
+		a, a:hover, a:visited, a:link, a:active {
+			color:#666;
+		}
 	}
 </style>
