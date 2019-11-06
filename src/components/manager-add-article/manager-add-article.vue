@@ -25,6 +25,7 @@
 				console.log('value', me.value)
 				console.log('val', val)
 				console.log('render', render)
+				this.$emit('CB-handleSave', true)
 			}
 		}
 	}

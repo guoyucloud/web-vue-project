@@ -1,7 +1,7 @@
 <template>
 	<div class="g-header">
 		<div class="header-logo">
-			<img src="./../../assets/GuoYuCloudLogoAndTitle.png" alt="">
+			<img @click="_goWelcome()" src="./../../assets/GuoYuCloudLogoAndTitle.png" alt="">
 		</div>
 		<div class="header-menu">
 			<g-menu />
@@ -15,6 +15,11 @@
 		data () {
 			return {
 
+			}
+		},
+		methods: {
+			_goWelcome () {
+				this.$router.push('/')
 			}
 		}
 	}
@@ -31,6 +36,7 @@
 			margin: 0 auto;
 			img{
 				width: 100%;
+				cursor: pointer;
 			}
 		}
 		.header-menu{

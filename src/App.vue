@@ -4,6 +4,22 @@
 	</div>
 </template>
 
+<script>
+	export default {
+		name: 'GApp',
+		data () {
+			return {
+			}
+		},
+		created () {
+		},
+		components: {
+		},
+		methods: {
+		}
+	}
+</script>
+
 <style lang="scss">
 	html,body {
 		width: 100%;

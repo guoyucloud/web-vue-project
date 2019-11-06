@@ -5,7 +5,7 @@
 			mode="horizontal"
 			@select="handleSelect"
 		>
-			<el-menu-item index="/">
+			<el-menu-item index="/home">
 				首页
 			</el-menu-item>
 			<el-menu-item index="/artic_list">

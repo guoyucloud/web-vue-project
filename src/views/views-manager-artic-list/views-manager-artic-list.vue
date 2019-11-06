@@ -18,7 +18,10 @@
 				/>
 			</el-tab-pane>
 			<el-tab-pane label="编辑文章" name="edit" disabled>
-				<g-manager-add-article class="views_manager_artic_list-add-article" />
+				<g-manager-add-article
+					class="views_manager_artic_list-add-article"
+					@CB-handleSave="_handleSave"
+				/>
 			</el-tab-pane>
 		</el-tabs>
 	</div>
@@ -42,6 +45,20 @@
 				this.$nextTick(() => {
 					this.$refs.viewsManagerArticListTable.tableHeightInit()
 				})
+			},
+			_handleSave (flag) {
+				if (flag) {
+					this.$message({
+						message: '发布成功',
+						type: 'success'
+					})
+					this.activeName = 'list'
+				} else {
+					this.$message({
+						message: '发布失败',
+						type: 'error'
+					})
+				}
 			}
 		}
 	}
