@@ -11,7 +11,6 @@
 		},
 		data () {
 			return {
-				numPages: undefined,
 				resumesUrl: '/resumes/gy_tj_resumes.pdf'
 			}
 		},
