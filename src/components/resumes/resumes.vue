@@ -1,10 +1,11 @@
 <template>
 	<div class="resumes">
-		<iframe class="resumes-pdf" :src="'/pdf/web/viewer.html?file=' + resumesUrl" frameborder="0" />
+		<g-pdf class="resumes-pdf" :pdf-url="resumesUrl" />
 	</div>
 </template>
 
 <script>
+	// import CPdf from './../pdf/CPdf'
 	export default {
 		name: 'GResumes',
 		components: {
