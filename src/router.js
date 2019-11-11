@@ -8,14 +8,6 @@ const originalPush = Router.prototype.push
 Router.prototype.push = function push (location) {
 	return originalPush.call(this, location).catch(err => err)
 }
-Router.beforeEach((to, from, next) => {
-	if (window._hmt) {
-		if (to.path) {
-			window._hmt.push(['_trackPageview', to.fullPath])
-		}
-	}
-	next()
-})
 export default new Router({
 	mode: 'history',
 	base: process.env.BASE_URL,
@@ -131,4 +123,12 @@ export default new Router({
 			]
 		}
 	]
+})
+Router.beforeEach((to, from, next) => {
+	if (window._hmt) {
+		if (to.path) {
+			window._hmt.push(['_trackPageview', to.fullPath])
+		}
+	}
+	next()
 })
