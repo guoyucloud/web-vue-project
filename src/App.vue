@@ -11,6 +11,9 @@
 			return {
 			}
 		},
+		mounted () {
+
+		},
 		created () {
 		},
 		components: {
