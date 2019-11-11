@@ -28,3 +28,12 @@ new Vue({
 	store,
 	render: h => h(App)
 }).$mount('#app')
+
+router.beforeEach((to, from, next) => {
+	if (window._hmt) {
+		if (to.path) {
+			window._hmt.push(['_trackPageview', to.fullPath])
+		}
+	}
+	next()
+})
