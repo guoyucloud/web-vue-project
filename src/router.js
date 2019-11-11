@@ -13,7 +13,7 @@ export default new Router({
 	base: process.env.BASE_URL,
 	routes: [
 		{
-			path: '/',
+			path: '/welcome',
 			name: 'welcome',
 			component: () => import('./views/welcome.vue'),
 			meta: {
@@ -31,15 +31,16 @@ export default new Router({
 			}
 		},
 		{
-			path: '/home',
+			path: '/',
 			component: index,
+			redirect: '/home',
 			meta: {
 				title: '框架',
 				notCache: true
 			},
 			children: [
 				{
-					path: '/',
+					path: '/home',
 					name: 'home',
 					component: () => import('./views/home/home.vue'),
 					meta: {

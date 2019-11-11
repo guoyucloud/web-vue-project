@@ -48,14 +48,24 @@
 		name: 'Welcome',
 		data () {
 			return {
-				blogUrl: 'https://blog.guoyucloud.com'
+				blogUrl: 'https://blog.guoyucloud.com',
+				mobileAppUrl: 'https://m.guoyucloud.com',
+				pcAppUrl: 'https://www.guoyucloud.com'
 			}
 		},
 		components: {
 		},
 		methods: {
+			_isMobile () {
+				let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+				return flag
+			},
 			_goHome () {
-				this.$router.push('/home')
+				if (this._isMobile) {
+					window.open(this.mobileAppUrl)
+				} else {
+					window.open(this.pcAppUrl)
+				}
 			},
 			_goBlog () {
 				window.open(this.blogUrl)
